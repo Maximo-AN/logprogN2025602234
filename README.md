@@ -1,3 +1,4 @@
 ### Update 03/26/2025  
-* Se agrega el diagrama de flujo del ej. de donas.  
-* Se agrega el diagrama de flujo del ej. año bisiesto.
+_Se creó subcarpeta para la tarea propuesta, contiene:_
+* Diagrama de flujo del ej. de donas.  
+* Diagrama de flujo del ej. año bisiesto.
