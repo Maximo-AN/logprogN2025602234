@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="donas"/>
+        <attribute name="authors" value="matim"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-21 07:03:45 PM"/>
+        <attribute name="created" value="bWF0aW07REVTS1RPUC00QVRWU1VDOzIwMjUtMDMtMjE7MDY6MTI6NTEgUE07MjkxNQ=="/>
+        <attribute name="edited" value="bWF0aW07REVTS1RPUC00QVRWU1VDOzIwMjUtMDMtMjE7MDc6MDM6NDUgUE07MTszMDI3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="donas" type="Integer" array="False" size=""/>
+            <declare name="costo" type="Integer" array="False" size=""/>
+            <declare name="total" type="Integer" array="False" size=""/>
+            <assign variable="costo" expression="10"/>
+            <output expression="&quot;&#191;Cu&#225;ntas donas?:&quot;" newline="True"/>
+            <input variable="donas"/>
+            <if expression="donas &gt;= 50">
+                <then>
+                    <output expression="&quot;Tiene un descuento de -$2.00 por dona.&quot;" newline="True"/>
+                    <assign variable="total" expression="(donas * costo) - (donas * 2)"/>
+                </then>
+                <else>
+                    <if expression="donas &gt;= 30">
+                        <then>
+                            <output expression="&quot;Tiene un descuento de -$1.00 por dona.&quot;" newline="True"/>
+                            <assign variable="total" expression="(donas * costo) - donas"/>
+                        </then>
+                        <else>
+                            <assign variable="total" expression="donas * costo"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Total a pagar: $&quot;&amp;total&amp;&#13;&#10;ToChar(13)&amp;&quot;Gracias por su visita :D&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
