@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="juegos"/>
+        <attribute name="authors" value="matim"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-30 05:52:03 PM"/>
+        <attribute name="created" value="bWF0aW07REVTS1RPUC00QVRWU1VDOzIwMjUtMDMtMzA7MDU6MzA6MDYgUE07MjkxNA=="/>
+        <attribute name="edited" value="bWF0aW07REVTS1RPUC00QVRWU1VDOzIwMjUtMDMtMzA7MDU6NTI6MDMgUE07MTszMDIz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="edad" type="Integer" array="False" size=""/>
+            <output expression="&quot;Bienvenid@ a la sala de juegos ElNene&quot;&amp;toChar(13)&amp;&#13;&#10;&quot;Escribe tu edad: &quot;" newline="True"/>
+            <input variable="edad"/>
+            <if expression="edad &gt; 18">
+                <then>
+                    <output expression="&quot;Tu entrada ser&#225; de $500&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="edad &gt;= 4 &amp;&amp; edad &lt;= 18">
+                        <then>
+                            <output expression="&quot;Tu entrada ser&#225; de $200&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="edad &lt; 4 &amp;&amp; edad &gt;= 0">
+                                <then>
+                                    <output expression="&quot;Tu entras gratis peque&#241;in :3&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Ingresa una edad valida...&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

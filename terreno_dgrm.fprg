@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="terreno_dgrm"/>
+        <attribute name="authors" value="matim"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-13 06:53:26 PM"/>
+        <attribute name="created" value="bWF0aW07REVTS1RPUC00QVRWU1VDOzIwMjUtMDMtMTM7MDY6MzI6NDcgUE07MjkyMw=="/>
+        <attribute name="edited" value="bWF0aW07REVTS1RPUC00QVRWU1VDOzIwMjUtMDMtMTM7MDY6NTM6MjYgUE07MjszMDMy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="m2" type="Real" array="False" size=""/>
+            <declare name="IVA" type="Real" array="False" size=""/>
+            <declare name="terrenoT" type="Integer" array="False" size=""/>
+            <declare name="totalT" type="Real" array="False" size=""/>
+            <declare name="totalR" type="Real" array="False" size=""/>
+            <assign variable="m2" expression="9256.00"/>
+            <assign variable="IVA" expression="0.16"/>
+            <input variable="terrenoT"/>
+            <assign variable="totalT" expression="m2 * terrenoT"/>
+            <assign variable="totalR" expression="totalT + (totalT * IVA)"/>
+            <output expression="&quot;El valor del terreno es: $&quot;&amp;totalR" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="grupos"/>
+        <attribute name="authors" value="matim"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-30 05:30:04 PM"/>
+        <attribute name="created" value="bWF0aW07REVTS1RPUC00QVRWU1VDOzIwMjUtMDMtMzA7MDQ6NDQ6NTAgUE07MjkxNw=="/>
+        <attribute name="edited" value="bWF0aW07REVTS1RPUC00QVRWU1VDOzIwMjUtMDMtMzA7MDU6MzA6MDQgUE07MjszMDIx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="genero" type="String" array="False" size=""/>
+            <declare name="inicialN" type="String" array="False" size=""/>
+            <output expression="&quot;Indica tu genero/sexo con H (Hombre) o M (Mujer): &quot;" newline="True"/>
+            <input variable="genero"/>
+            <if expression="(genero != &quot;M&quot;) &amp;&amp; (genero !=&quot;H&quot;)">
+                <then>
+                    <output expression="&quot;Ingresa un genero valido.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Escribe la inicial de tu primer nombre:&quot;" newline="True"/>
+                    <input variable="inicialN"/>
+                    <if expression="(genero == &quot;M&quot; &amp;&amp; inicialN &lt; &quot;M&quot;) || (genero == &quot;H&quot; &amp;&amp; inicialN &gt; &quot;N&quot;)">
+                        <then>
+                            <output expression="&quot;Perteneces al grupo A&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Perteneces al grupo B&quot;" newline="True"/>
+                        </else>
+                    </if>
+                    <if expression="genero == &quot;M&quot;">
+                        <then>
+                            <output expression="&quot;Genero: Mujer&quot;&amp;toChar(13)&amp;&#13;&#10;&quot;Inicial de nombre: &quot;&amp;inicialN" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Genero: Hombre&quot;&amp;toChar(13)&amp;&#13;&#10;&quot;Inicial de nombre: &quot;&amp;inicialN" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
