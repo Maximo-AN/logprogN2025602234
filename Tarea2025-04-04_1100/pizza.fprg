@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="pizza"/>
+        <attribute name="authors" value="matim"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-04-03 08:21:44 PM"/>
+        <attribute name="created" value="bWF0aW07REVTS1RPUC00QVRWU1VDOzIwMjUtMDQtMDM7MDc6NDM6MDMgUE07MjkxOA=="/>
+        <attribute name="edited" value="bWF0aW07REVTS1RPUC00QVRWU1VDOzIwMjUtMDQtMDM7MDg6MjE6NDQgUE07MTszMDI4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="opc, res" type="String" array="False" size=""/>
+            <declare name="ingrediente" type="Integer" array="False" size=""/>
+            <output expression="&quot;&#191;Quieres que la pizza sea vegetariana?&quot;&amp;ToChar(13)&#13;&#10;&amp;&quot;Escribe S (si) o N (no): &quot;" newline="True"/>
+            <input variable="opc"/>
+            <if expression="opc != &quot;S&quot; &amp;&amp; opc != &quot;N&quot;">
+                <then>
+                    <assign variable="res" expression="&quot;Ingresa una opcion valida.&quot;"/>
+                </then>
+                <else>
+                    <if expression="opc == &quot;S&quot;">
+                        <then>
+                            <assign variable="res" expression="&quot;Pizza vegetariana&quot;&amp;ToChar(13)"/>
+                            <output expression="&quot;&#191;Qu&#233; ingrediente deseas agregar?&quot;&amp;ToChar(13)&#13;&#10;&amp;&quot;1- Pimiento&quot;&amp;ToChar(13)&#13;&#10;&amp;&quot;2- Tofu&quot;&amp;ToChar(13)&amp;ToChar(13)&#13;&#10;&amp;&quot;Escribe el numero del ingrediente que desees: &quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <assign variable="res" expression="&quot;Pizza NO vegetariana&quot;&amp;ToChar(13)"/>
+                            <output expression="&quot;&#191;Qu&#233; ingrediente deseas agregar?&quot;&amp;ToChar(13)&#13;&#10;&amp;&quot;1- Pepperoni&quot;&amp;ToChar(13)&#13;&#10;&amp;&quot;2- Jam&#243;n&quot;&amp;ToChar(13)&#13;&#10;&amp;&quot;3- Salm&#243;n&quot;&amp;ToChar(13)&amp;ToChar(13)&#13;&#10;&amp;&quot;Escribe el numero del ingrediente que desees: &quot;" newline="True"/>
+                        </else>
+                    </if>
+                    <input variable="ingrediente"/>
+                    <if expression="ingrediente == 1 &amp;&amp; opc == &quot;S&quot;">
+                        <then>
+                            <assign variable="res" expression="res&amp;&quot;Ingredientes: Pimiento, mozzarella y tomate.&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="ingrediente == 2 &amp;&amp; opc == &quot;S&quot;">
+                                <then>
+                                    <assign variable="res" expression="res&amp;&quot;Ingredientes: Tofu, mozzarella y tomate.&quot;"/>
+                                </then>
+                                <else>
+                                    <if expression="ingrediente == 1 &amp;&amp; opc == &quot;N&quot;">
+                                        <then>
+                                            <assign variable="res" expression="res&amp;&quot;Ingredientes: Pepperoni, mozzarella y tomate.&quot;"/>
+                                        </then>
+                                        <else>
+                                            <if expression="ingrediente == 2 &amp;&amp; opc == &quot;N&quot;">
+                                                <then>
+                                                    <assign variable="res" expression="res&amp;&quot;Ingredientes: Jam&#243;n, mozzarella y tomate.&quot;"/>
+                                                </then>
+                                                <else>
+                                                    <if expression="ingrediente == 3 &amp;&amp; opc == &quot;N&quot;">
+                                                        <then>
+                                                            <assign variable="res" expression="res&amp;&quot;Ingredientes: Salm&#243;n, mozzarella y tomate.&quot;"/>
+                                                        </then>
+                                                        <else>
+                                                            <assign variable="res" expression="res&amp;&quot;Ingresaste un dato invalido por lo que tu pizza solo tendr&#225; Mozzarella y tomate.&quot;"/>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="res" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
