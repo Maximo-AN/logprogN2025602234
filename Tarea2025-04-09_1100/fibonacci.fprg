@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="fibonacci"/>
+        <attribute name="authors" value="matim"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-04-05 10:50:48 PM"/>
+        <attribute name="created" value="bWF0aW07REVTS1RPUC00QVRWU1VDOzIwMjUtMDQtMDU7MDg6NDk6MDYgUE07MjkzMA=="/>
+        <attribute name="edited" value="bWF0aW07REVTS1RPUC00QVRWU1VDOzIwMjUtMDQtMDU7MTA6NTA6NDggUE07MzszMDMx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x, y, i, r" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="1"/>
+            <assign variable="x" expression="1"/>
+            <assign variable="y" expression="2"/>
+            <output expression="&quot;Serie Fibonacci (64 numeros, origen: 1,2)&quot;" newline="True"/>
+            <output expression="x&amp;&quot; , &quot;&amp;y" newline="False"/>
+            <do expression="i &lt;= 64">
+                <output expression="&quot; , &quot;&amp;x+y" newline="False"/>
+                <assign variable="r" expression="x+y"/>
+                <assign variable="x" expression="y"/>
+                <assign variable="y" expression="r"/>
+                <assign variable="i" expression="i+1"/>
+            </do>
+        </body>
+    </function>
+</flowgorithm>

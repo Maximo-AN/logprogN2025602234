@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="factorial"/>
+        <attribute name="authors" value="matim"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-04-05 08:48:55 PM"/>
+        <attribute name="created" value="bWF0aW07REVTS1RPUC00QVRWU1VDOzIwMjUtMDQtMDU7MDg6MjY6NDYgUE07MjkyOQ=="/>
+        <attribute name="edited" value="bWF0aW07REVTS1RPUC00QVRWU1VDOzIwMjUtMDQtMDU7MDg6NDg6NTUgUE07MjszMDQy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num, i, res" type="Integer" array="False" size=""/>
+            <assign variable="res" expression="1"/>
+            <output expression="&quot;Ingresa el numero que deseas para obtener el factorial:&quot;" newline="True"/>
+            <input variable="num"/>
+            <for variable="i" start="1" end="num" direction="inc" step="1">
+                <assign variable="res" expression="i * res"/>
+            </for>
+            <output expression="&quot;Factorial: &quot;&amp;res" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
